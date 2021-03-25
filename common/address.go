@@ -18,7 +18,7 @@ import (
 )
 
 const (
-	DefaultAddressHRP = "lpt"
+	DefaultAddressHRP = "lpq"
 )
 
 var currentAddressHRP string
