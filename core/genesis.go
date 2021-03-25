@@ -432,7 +432,7 @@ func (g *Genesis) ToBlock(db ethdb.Database, sdb snapshotdb.BaseDB) *types.Block
 				panic("Failed Store EcHash0160: " + err.Error())
 			}
 		}
-    
+
 		if g.Config != nil && g.Config.ChainID.Cmp(params.AlayaChainConfig.ChainID) != 0 {
 			if g.Config.AddressHRP != "" {
 				statedb.SetString(vm.StakingContractAddr, rawdb.AddressHRPKey, g.Config.AddressHRP)
@@ -538,7 +538,7 @@ func GenesisBlockForTesting(db ethdb.Database, addr common.Address, balance *big
 // DefaultGenesisBlock returns the PlatON main net genesis block.
 func DefaultAlayaGenesisBlock() *Genesis {
 
-	generalAddr := common.MustBech32ToAddress("atp1hzqghmjtzcggxa0clhaxddz0asdtkpmj23lv6j")
+	generalAddr := common.MustBech32ToAddress("lpt1hzqghmjtzcggxa0clhaxddz0asdtkpmj23lv6j")
 	generalBalance, _ := new(big.Int).SetString("100000000000000000000000000", 10)
 
 	rewardMgrPoolIssue, _ := new(big.Int).SetString("2000000000000000000000000", 10)
